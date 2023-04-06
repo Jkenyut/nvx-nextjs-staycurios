@@ -94,7 +94,7 @@ function MyForm() {
   const onFinishFailed = () => {
     messageApi.error("Submit failed!");
   };
-  console.log(scrollOffset);
+
   return (
     <div>
       <p
@@ -117,6 +117,7 @@ function MyForm() {
         >
           {contextHolder}
           <Form.Item
+            tooltip={{ color: "#2db7f5", title: "input name" }}
             name="name"
             label="Name"
             rules={[
@@ -140,24 +141,22 @@ function MyForm() {
             hasFeedback={true}
             className="mb-1 "
           >
-            <Tooltip placement="topRight" color="#2db7f5" title="input name">
-              <Input className="rounded-md border-slate-300" value={initialValues.name} />
-            </Tooltip>
+            <Input className="rounded-md border-slate-300" value={initialValues.name} />
           </Form.Item>
 
           <Form.Item
+            tooltip={{ color: "#2db7f5", title: "input email" }}
             hasFeedback
             name="email"
             label="Email"
             rules={[{ required: true, type: "email" }]}
             className="mb-1 "
           >
-            <Tooltip placement="topRight" color="#2db7f5" title="input email">
-              <Input className="rounded-md border-slate-300" value={initialValues.email} />
-            </Tooltip>
+            <Input className="rounded-md border-slate-300" value={initialValues.email} />
           </Form.Item>
 
           <Form.Item
+            tooltip={{ color: "#2db7f5", title: "input age" }}
             hasFeedback
             name="age"
             label="Age"
@@ -179,21 +178,20 @@ function MyForm() {
             ]}
             className="mb-1 "
           >
-            <Tooltip placement="right" color="#2db7f5" title="age">
-              <InputNumber
-                className="rounded-md border-slate-300"
-                min={17}
-                max={99}
-                placeholder="0"
-                value={initialValues.age}
-              />
-            </Tooltip>
+            <InputNumber
+              className="rounded-md border-slate-300"
+              min={17}
+              max={99}
+              placeholder="0"
+              value={initialValues.age}
+            />
           </Form.Item>
 
           <Form.Item
+            tooltip={{ color: "#2db7f5", title: "input problem" }}
             hasFeedback
             name="description"
-            label="Description"
+            label="Problem"
             className="mb-1 "
             rules={[
               { required: true, message: "Description your problem" },
@@ -213,9 +211,7 @@ function MyForm() {
               },
             ]}
           >
-            <Tooltip placement="topRight" color="#2db7f5" title="input problem">
-              <Input.TextArea showCount maxLength={500} value={initialValues.description} />
-            </Tooltip>
+            <Input.TextArea showCount maxLength={500} value={initialValues.description} />
           </Form.Item>
 
           <Form.Item
