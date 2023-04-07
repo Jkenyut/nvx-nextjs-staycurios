@@ -54,7 +54,7 @@ function MyForm() {
   const [loading, Setloading] = useState(true);
 
   const updateScrollOffset = () => {
-    if (scrollOffset > 800) {
+    if (scrollOffset > 700) {
       setTimeout(() => {
         Setloading(false);
       }, 2000);
