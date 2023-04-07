@@ -174,7 +174,7 @@ function MyForm() {
                   }
                 },
               },
-              { required: true, type: "number", min: 17, max: 99 },
+              { required: true, type: "number", min: 17, max: 50 },
             ]}
             className="mb-1 "
           >
