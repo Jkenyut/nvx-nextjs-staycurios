@@ -57,7 +57,7 @@ function MyForm() {
     if (scrollOffset > 700) {
       setTimeout(() => {
         Setloading(false);
-      }, 2000);
+      }, 1500);
     }
     setScrollOffset(window.pageYOffset);
     requestAnimationFrame(updateScrollOffset);
@@ -84,7 +84,7 @@ function MyForm() {
       );
     } else {
       window.open(
-        `https://wa.me/081226428336?text=Hello%2C%20I%20would%20like%20to%20consult%20regarding%20code%20${codeNumber}.%20Please%20provide%20the%20following%20dataform%3A%0D%0Aname%20%3A%20${values.name}%0D%0Aemail%20%3A%20${values.email}%0D%0Aage%20%3A%20${values.age}%0D%0Adescription%20%3A%20${values.description}%0D%0Athank%20you.`
+        `https://wa.me/+6281226428336?text=Hello%2C%20I%20would%20like%20to%20consult%20regarding%20code%20${codeNumber}.%20Please%20provide%20the%20following%20dataform%3A%0D%0Aname%20%3A%20${values.name}%0D%0Aemail%20%3A%20${values.email}%0D%0Aage%20%3A%20${values.age}%0D%0Adescription%20%3A%20${values.description}%0D%0Athank%20you.`
       );
     }
   };
@@ -166,6 +166,7 @@ function MyForm() {
                     .number()
                     .min(17, { message: "Must be 17th or more" })
                     .safeParse(value);
+
                   if (name.success === true) {
                     return Promise.resolve();
                   } else {
@@ -179,7 +180,7 @@ function MyForm() {
           >
             <InputNumber
               className="rounded-md border-slate-300"
-              min={17}
+              min={0}
               max={99}
               placeholder="0"
               value={initialValues.age}

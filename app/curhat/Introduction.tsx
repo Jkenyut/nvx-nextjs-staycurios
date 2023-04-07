@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { ReactElement } from "react";
-import Image from "next/image";
-import Motivator from "./Motivator";
+
 function Introduction() {
   return <Header />;
 }
@@ -28,13 +27,13 @@ const Header: React.FC = () => {
     },
     {
       motivation:
-        "Don't let failures stop you. Every failure is an opportunity to learn and grow. Keep moving forward and don't give up on your dreams.",
+        "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
     },
   ];
-  const random = ((Math.floor(Math.random() * 6) + 1) % 5) + 1;
+  const random = Math.floor(Math.random() * 6);
   return (
     <div>
-      <section className="relative bg-[url('/curhat.png')] rounded-2xl bg-cover bg-center bg-no-repeat mt-5">
+      <section className="relative bg-[url('/curhat.png')] rounded-2xl bg-cover bg-center bg-no-repeat mt-[2px]">
         <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/95 sm:to-white/25"></div>
 
         <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
