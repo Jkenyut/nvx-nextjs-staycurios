@@ -8,12 +8,10 @@ import {
   InputNumber,
   message,
   Checkbox,
-  Tooltip,
   Skeleton,
 } from "antd";
 import { WhatsAppOutlined, MailOutlined } from "@ant-design/icons";
 import { z } from "zod";
-import { useRouter } from "next/navigation";
 
 interface CurhatInput {
   name: string;
@@ -28,8 +26,8 @@ const layout = {
 const tailFormItemLayout = {
   wrapperCol: {
     xs: {
-      span: 24,
-      offset: 5,
+      span: 16,
+      offset: 7,
     },
     sm: {
       span: 16,
@@ -109,7 +107,8 @@ function MyForm() {
           initialValues={initialValues}
           onFinish={onFinish}
           form={form}
-          {...layout}
+          labelCol={{ span: 8 }}
+          wrapperCol={{ span: 16 }}
           name="complex-form"
           onFinishFailed={onFinishFailed}
           style={{ maxWidth: 600 }}
@@ -215,21 +214,24 @@ function MyForm() {
           </Form.Item>
 
           <Form.Item
-            className="mb-1"
+            className="mb-1 mx-auto"
             name="agreement"
             valuePropName="checked"
+            wrapperCol={{ sm: { span: 16, offset: 8 }, xs: { span: 16 } }}
             rules={[
               {
                 validator: (_, value) =>
                   value ? Promise.resolve() : Promise.reject(new Error("Should accept agreement")),
               },
             ]}
-            {...tailFormItemLayout}
           >
-            <Checkbox>I have read the a greement</Checkbox>
+            <Checkbox>I have read the agreement</Checkbox>
           </Form.Item>
 
-          <Form.Item wrapperCol={{ ...tailFormItemLayout.wrapperCol }} className="mb-0">
+          <Form.Item
+            wrapperCol={{ sm: { span: 16, offset: 8 }, xs: { span: 16 } }}
+            className="mb-0 "
+          >
             <ConfigProvider
               theme={{
                 token: {

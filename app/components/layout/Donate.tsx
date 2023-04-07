@@ -11,6 +11,7 @@ const Donate: React.FC = () => {
   return (
     <>
       <Drawer
+        className="text-slate-700 text-xs font-thin     "
         title="Donation to support the project"
         placement="bottom"
         width={500}
