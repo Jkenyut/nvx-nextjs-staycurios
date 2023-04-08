@@ -100,7 +100,7 @@ function MyForm() {
         >
           {contextHolder}
           <Form.Item
-            tooltip={{ color: "#2db7f5", title: "input name", mouseLeaveDelay: 1.2 }}
+            tooltip={{ color: "#2db7f5", title: "input name", mouseLeaveDelay: 1.3 }}
             name="name"
             label="Name"
             rules={[
@@ -128,7 +128,7 @@ function MyForm() {
           </Form.Item>
 
           <Form.Item
-            tooltip={{ color: "#2db7f5", title: "input email", mouseLeaveDelay: 1.2 }}
+            tooltip={{ color: "#2db7f5", title: "input email", mouseLeaveDelay: 1.3 }}
             hasFeedback
             name="email"
             label="Email"
@@ -139,7 +139,7 @@ function MyForm() {
           </Form.Item>
 
           <Form.Item
-            tooltip={{ color: "#2db7f5", title: "input age", mouseLeaveDelay: 1.2 }}
+            tooltip={{ color: "#2db7f5", title: "input age", mouseLeaveDelay: 1.3 }}
             hasFeedback
             name="age"
             label="Age"
@@ -172,7 +172,7 @@ function MyForm() {
           </Form.Item>
 
           <Form.Item
-            tooltip={{ color: "#2db7f5", title: "input problem", mouseLeaveDelay: 1.2 }}
+            tooltip={{ color: "#2db7f5", title: "input problem", mouseLeaveDelay: 1.3 }}
             hasFeedback
             name="description"
             label="Problem"
