@@ -26,6 +26,6 @@
       "@components/curhat/*": ["./app/components/curhat/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.tsx", "app/not-found.tsx"],
   "exclude": ["node_modules"]
 }

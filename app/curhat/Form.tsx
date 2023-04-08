@@ -1,5 +1,5 @@
 "use client";
-import React, { FormEvent, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Button,
   ConfigProvider,
@@ -19,22 +19,6 @@ interface CurhatInput {
   description: string;
   email: string;
 }
-const layout = {
-  labelCol: { span: 4 },
-  wrapperCol: { span: 16 },
-};
-const tailFormItemLayout = {
-  wrapperCol: {
-    xs: {
-      span: 16,
-      offset: 7,
-    },
-    sm: {
-      span: 16,
-      offset: 8,
-    },
-  },
-};
 
 /* eslint-disable no-template-curly-in-string */
 const validateMessages = {
@@ -54,7 +38,7 @@ function MyForm() {
   const [loading, Setloading] = useState(true);
 
   const updateScrollOffset = () => {
-    if (scrollOffset > 700) {
+    if (scrollOffset > 600) {
       setTimeout(() => {
         Setloading(false);
       }, 1500);
@@ -116,7 +100,7 @@ function MyForm() {
         >
           {contextHolder}
           <Form.Item
-            tooltip={{ color: "#2db7f5", title: "input name" }}
+            tooltip={{ color: "#2db7f5", title: "input name", mouseLeaveDelay: 1.2 }}
             name="name"
             label="Name"
             rules={[
@@ -144,7 +128,7 @@ function MyForm() {
           </Form.Item>
 
           <Form.Item
-            tooltip={{ color: "#2db7f5", title: "input email" }}
+            tooltip={{ color: "#2db7f5", title: "input email", mouseLeaveDelay: 1.2 }}
             hasFeedback
             name="email"
             label="Email"
@@ -155,7 +139,7 @@ function MyForm() {
           </Form.Item>
 
           <Form.Item
-            tooltip={{ color: "#2db7f5", title: "input age" }}
+            tooltip={{ color: "#2db7f5", title: "input age", mouseLeaveDelay: 1.2 }}
             hasFeedback
             name="age"
             label="Age"
@@ -188,7 +172,7 @@ function MyForm() {
           </Form.Item>
 
           <Form.Item
-            tooltip={{ color: "#2db7f5", title: "input problem" }}
+            tooltip={{ color: "#2db7f5", title: "input problem", mouseLeaveDelay: 1.2 }}
             hasFeedback
             name="description"
             label="Problem"
@@ -226,7 +210,7 @@ function MyForm() {
               },
             ]}
           >
-            <Checkbox>I have read the agreement</Checkbox>
+            <Checkbox>I agree to the agreement.</Checkbox>
           </Form.Item>
 
           <Form.Item
