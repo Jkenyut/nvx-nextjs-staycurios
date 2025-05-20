@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-  .content {
-    @apply h-[400px] border-4 justify-center items-center bg-slate-400;
-  }
+    .content {
+        @apply h-[400px] border-4 justify-center items-center bg-slate-400;
+    }
 }
 
 svg {
-  vertical-align: baseline;
+    vertical-align: baseline;
 }
